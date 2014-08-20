@@ -1,0 +1,154 @@
+\documentclass[xcolor=x11names,compress,aspectratio=43]{beamer}
+
+%% General document Required packages%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{hanging}% http://ctan.org/pkg/hanging
+\usepackage{contour}
+\usepackage{color}
+%% \usepackage{fontspec}
+\usepackage{anyfontsize}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{animate}
+\usepackage{xcolor}
+\usepackage{gensymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{default}
+%\usepackage{palatino}
+
+%%%% Bibliography
+% If you have more than one page of references, you want to tell beamer
+% to put the continuation section label from the second slide onwards
+\setbeamertemplate{frametitle continuation}[from second]
+\setbeamertemplate{bibliography item}[text]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ucsfteal}{RGB}{136,187,187}
+\definecolor{ucsfgray}{RGB}{187,187,170}
+\definecolor{ucsfdarkblue}{RGB}{0,51,102}
+\definecolor{gold}{RGB}{255,191,0}
+\definecolor{goldenblue}{RGB}{27,27,179}
+
+
+% Font settings
+%% \setsansfont{Lato}
+%% \setsansfont{Raleway}
+%% \defaultfontfeatures{Mapping=tex-text}
+%% \usepackage{xunicode}
+%% \usepackage{xltxtra}
+\setbeamerfont{title like}{shape=\scshape}
+
+%% \setbeamerfont{frametitle}{shape=\scshape}
+%% \setbeamerfont{title}{family=\fontspec{Oswald}}
+%% \setbeamerfont{frametitle}{family=\fontspec{Oswald}}
+%% \setbeamerfont{title}{family=\rm\addfontfeatures{Scale=1.18, Numbers={Lining, Proportional}}}
+
+\setbeamercolor*{lower separation line head}{bg=ucsfteal} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=red} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black}
+\setbeamercolor*{section in sidebar shaded}{fg=ucsfgray} 
+ 
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10} 
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+% Comment out to add navigation controls
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+\setbeamertemplate{footnote}{%
+  \hangpara{2em}{1}%
+  \makebox[2em][l]{\insertfootnotemark}\footnotesize\insertfootnotetext\par%
+}
+
+\renewcommand{\(}{\begin{columns}}
+\renewcommand{\)}{\end{columns}}
+\newcommand{\<}[1]{\begin{column}{#1}}
+\renewcommand{\>}{\end{column}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Useful commands
+\newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+\usepackage{comment}
+
+% Blank footnotes
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+\let\oldfootnotesize\footnotesize
+\renewcommand*{\footnotesize}{\oldfootnotesize\tiny}
+
+\title[] % (optional, use only with long paper titles)
+{The shell and you}
+
+%\subtitle
+%{} % (optional)
+
+\author[Kyle] % (optional, use only with lots of authors)
+{K-y/a-le}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+%% \institute[UCSF] % (optional, but mostly needed)
+%% {
+%%  iPQB\\
+%%  University of California, San Francisco
+%% % - Use the \inst command only if there are several affiliations.
+%% % - Keep it simple, no one is interested in your street address.
+%% }
+
+\date[] % (optional)
+{2014-09-05}
+
+%\subject{}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+\begin{document}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+% Can be set to AtBeginSection or AtBeginSubsection
+%\AtBeginSection[]{
+%{
+%\begin{frame}<beamer>{Outline}
+%  \tableofcontents[currentsection,currentsubsection]
+%\end{frame}
+%}
+%}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+\contourlength{2pt} %how thick each copy is
+\contournumber{30}  %number of copies
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+%  \tableofcontents
+  % You might wish to add the option [pausesections]
+%\end{frame}
+
+\section{Method}
+\subsection{Method}
+
+\begin{frame}{This is a slide}
+  \begin{itemize}
+  \item Item 1
+  \item Item 2
+  \end{itemize}
+\end{frame}
+
+\end{document}
