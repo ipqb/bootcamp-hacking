@@ -3,12 +3,12 @@ TEXNAME=shell-presentation
 
 all: latex
 q: $(TEXNAME).tex $(SOURCES)
-	pdflatex $(TEXNAME)
+	pdflatex -shell-escape $(TEXNAME)
 latex: $(TEXNAME).pdf
 $(TEXNAME).pdf: $(TEXNAME).tex $(SOURCES)
-	pdflatex $(TEXNAME)
-	pdflatex $(TEXNAME)
-	pdflatex $(TEXNAME)
+	pdflatex -shell-escape $(TEXNAME)
+	pdflatex -shell-escape $(TEXNAME)
+	pdflatex -shell-escape $(TEXNAME)
 smallclean:
 	rm -f $(TEXNAME).blg $(TEXNAME).bbl $(TEXNAME).aux $(TEXNAME).log $(TEXNAME).nav
 clean:
@@ -16,8 +16,8 @@ clean:
 diff:
 	git-latexdiff --main $(TEXNAME).tex -o diff.pdf -v $(OLD)
 rtf:
-	pdflatex $(TEXNAME)
-	pdflatex $(TEXNAME)
-	pdflatex $(TEXNAME)
+	pdflatex -shell-escape $(TEXNAME)
+	pdflatex -shell-escape $(TEXNAME)
+	pdflatex -shell-escape $(TEXNAME)
 	latex2rtf $(TEXNAME).tex
 

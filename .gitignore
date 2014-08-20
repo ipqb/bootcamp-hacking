@@ -4,4 +4,6 @@
 *.out
 *.snm
 *.toc
+*.pyg
+*.vrb
 shell-presentation.pdf
