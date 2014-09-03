@@ -1,5 +1,5 @@
-SOURCES = Makefile bootcamp-lecture.tex $(wildcard slides/*.tex)
-TEXNAME = bootcamp-lecture
+SOURCES = Makefile bootcamp-lecture.tex slides/*
+TEXNAME=bootcamp-lecture
 
 all: latex
 q: $(TEXNAME).tex $(SOURCES)
