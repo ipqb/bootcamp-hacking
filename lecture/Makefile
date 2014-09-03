@@ -1,5 +1,5 @@
-SOURCES = Makefile shell-presentation.tex
-TEXNAME=shell-presentation
+SOURCES = Makefile bootcamp-lecture.tex
+TEXNAME=bootcamp-lecture
 
 all: latex
 q: $(TEXNAME).tex $(SOURCES)
