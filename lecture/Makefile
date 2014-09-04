@@ -1,4 +1,4 @@
-SOURCES = Makefile bootcamp-lecture.tex slides/*
+SOURCES = Makefile bootcamp-lecture.tex slides/* code-snippets/*
 TEXNAME=bootcamp-lecture
 
 all: latex
