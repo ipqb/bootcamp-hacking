@@ -1,0 +1,91 @@
+\begin{frame}{BFF: The Command Line And You}
+  Why use the command line?
+  \begin{itemize}
+  \item Using the command line is often faster than using an equivalent GUI
+    (\textbf{G}raphical \textbf{U}ser \textbf{I}nterface) tool
+  \item Many computing operations are only possible via the command line
+  \item The command line is used to access and control remote servers,
+    including scientific computing clusters
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{The terminal}
+  \begin{itemize}
+  \item The application you use to interact with the command line is called a
+    \textit{terminal}
+  \item On OSX, the terminal can be accessed by going to
+    Applications $\rightarrow$ Utilities $\rightarrow$ Terminal
+  \item Fire one up now!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Browsing the directory tree}
+  \begin{itemize}
+  \item Most terminals will start you off in your home directory
+  \item Type \texttt{pwd}\ to view your current working directory\\
+    (e.g. \textbf{p}rint \textbf{w}orking \textbf{d}irectory)
+    \begin{itemize}
+    \item \texttt{/} represents the ``root'' of your filesystem
+    \item All folders are subfolders of \texttt{/}
+    \item Each additional \texttt{/} indicates a new directory
+    \end{itemize}
+    \pause
+  \item Type \texttt{cd ..} to go up a directory
+  \item Type in the name of the directory you just left (your home directory)
+    to return where you started
+  \item Type \texttt{pwd} again to make sure you are in the same place
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Browsing the directory tree}
+  Next commands to type:
+  \begin{itemize}
+  \item \texttt{mkdir} makes a new directory
+  \item \texttt{touch} makes a new file
+  \item \texttt{ls} lists files and directories
+  \item \texttt{mv} moves files
+  \item \texttt{cp} copies files
+  \item \texttt{rm} removes files, \texttt{rm -r} removes folders
+  \item \texttt{man} tells you what a command does
+  \end{itemize}
+  Live demo!
+\end{frame}
+
+\begin{frame}{Output redirection/Wildcards}
+  \begin{itemize}
+  \item Typing \texttt{>} after a command saves its output to a file
+  \item Typing an asterisk character (\texttt{*}) as part of a
+    file or folder name matches any character string
+  \end{itemize}
+  Live demo!
+\end{frame}
+
+\begin{frame}{Other commonly used applications}
+  \begin{itemize}
+  \item \texttt{ssh} connects to remote computers
+  \item \texttt{tar} is used to compress and uncompress folders
+  \item \texttt{for} can be used to loop a command
+    (just like for loops in Python)
+  \item \texttt{du} is used to find the disk space of files and folders
+  \end{itemize}
+  Live demo!
+\end{frame}
+
+\begin{frame}{Shell activity}
+  \begin{itemize}
+  \item Run \texttt{make\_mess.py}
+    \pause
+  \item Remove all folders that have bad\_data in the name
+  \item Find which good\_data folders are the largest size and save to
+    a file named \texttt{file\_sizes.txt} in your home directory
+    \begin{itemize}
+    \item Hint: use \texttt{sort} and \texttt{du} with output redirection
+    \end{itemize}
+  \item Bonus points - move 5 largest folders to a new directory named
+    \texttt{best\_data}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Bonus solution}
+  \inputminted{bash}{code-snippets/bonus-shell-problem-solution.sh}
+\end{frame}
