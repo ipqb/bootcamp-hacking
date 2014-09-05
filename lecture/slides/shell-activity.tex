@@ -67,19 +67,25 @@
   \item \texttt{for} can be used to loop a command
     (just like for loops in Python)
   \item \texttt{du} is used to find the disk space of files and folders
+  \item \texttt{grep} can pull out specific lines of text
   \end{itemize}
   Live demo!
 \end{frame}
 
 \begin{frame}{Shell activity}
   \begin{itemize}
-  \item Run \texttt{make\_mess.py}
+  \item Run \texttt{make\_mess.py} - download from iPQB website
     \pause
   \item Remove all folders that have bad\_data in the name
   \item Find which good\_data folders are the largest size and save to
     a file named \texttt{file\_sizes.txt} in your home directory
     \begin{itemize}
     \item Hint: use \texttt{sort} and \texttt{du} with output redirection
+    \end{itemize}
+  \item Find all total\_score lines
+    \begin{itemize}
+    \item Bonus: remove files that are missing total\_score lines
+      (they will have 'SEGFAULT' at the end instead)
     \end{itemize}
   \item Bonus points - move 5 largest folders to a new directory named
     \texttt{best\_data}
