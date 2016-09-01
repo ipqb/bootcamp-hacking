@@ -1,14 +1,13 @@
 SOURCES = Makefile bootcamp-lecture.tex slides/* code-snippets/*
 TEXNAME=bootcamp-lecture
+LATEX= pdflatex -shell-escape -halt-on-error
 
 all: latex
 q: $(TEXNAME).tex $(SOURCES)
-	pdflatex -shell-escape $(TEXNAME)
+	$(LATEX) $(TEXNAME)
 latex: $(TEXNAME).pdf
 $(TEXNAME).pdf: $(TEXNAME).tex $(SOURCES)
-	pdflatex -shell-escape $(TEXNAME)
-	pdflatex -shell-escape $(TEXNAME)
-	pdflatex -shell-escape $(TEXNAME)
+	$(LATEX) $(TEXNAME)
 smallclean:
 	rm -f $(TEXNAME).blg $(TEXNAME).bbl $(TEXNAME).aux $(TEXNAME).log $(TEXNAME).nav
 clean:
@@ -20,4 +19,5 @@ rtf:
 	pdflatex -shell-escape $(TEXNAME)
 	pdflatex -shell-escape $(TEXNAME)
 	latex2rtf $(TEXNAME).tex
-
+rerun:
+	$(LATEX) $(TEXNAME)
